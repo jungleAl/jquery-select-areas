@@ -70,6 +70,11 @@
                     default:
                         return;
                 }
+
+                var namespace = '.selectareas';
+                browserEvent += namespace;
+                mobileEvent += namespace;
+
                 if (handler && jQuery.isFunction(handler)) {
                     $(window.document).on(browserEvent, handler).on(mobileEvent, handler);
                 } else {
